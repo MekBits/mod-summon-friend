@@ -1,0 +1,44 @@
+[worldserver]
+
+#
+#    SummonFriend.Enable
+#        Description: Enable .summonfriend. The command sends a normal summon
+#                     to a group member, shown as the client's own "X wants
+#                     to summon you" dialog. Nothing happens until the target
+#                     presses Accept.
+#        Default:     1 (enabled)
+#
+
+SummonFriend.Enable = 1
+
+#
+#    SummonFriend.CooldownSeconds
+#        Description: Seconds between two summons from the same character.
+#                     Meeting stones and Ritual of Summoning have no cooldown.
+#                     The timer lives in the worldserver's memory and starts
+#                     over on a restart.
+#        Default:     0 (none)
+#
+
+SummonFriend.CooldownSeconds = 0
+
+#
+#    SummonFriend.AllowInCombat
+#        Description: May a player send a summon while in combat themselves?
+#                     The target can never ACCEPT in combat -- the core
+#                     rejects that in WorldSession::HandleSummonResponseOpcode.
+#        Default:     0 (no, like meeting stones and warlocks)
+#
+
+SummonFriend.AllowInCombat = 0
+
+#
+#    SummonFriend.AllowFromInstances
+#        Description: May a player summon someone INTO a dungeon or raid they
+#                     are standing in? The core still checks on accept whether
+#                     the target may enter (group, raid group, instance bind),
+#                     exactly as for a warlock summon.
+#        Default:     1 (yes)
+#
+
+SummonFriend.AllowFromInstances = 1
